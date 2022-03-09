@@ -1,7 +1,7 @@
 ---
 title: Jump-Diffusion Model For Europe Brent Spot Price Process For The Period May
   1987 to May 2020
-author: "Matilda Bosire (122913)"
+author: "Matilda Bosire"
 date: "02/06/2020"
 output:
   pdf_document: default
@@ -32,13 +32,14 @@ The two basic building blocks to a jump-diffusion model, in their stochastic dif
 \section{Methodology (Describing the dynamics of the Jump Diffusion model)}
 A Levy process is a continuous-time stochastic process ${X_{t}, t>0}$ defined on a probability space $(\Omega, F, P)$ with the following properties:
 
-i) P(X_{0}=0)=1//
-ii) Stationary increments: the distribution $X_{t+s}-X_{t}$ over the interval $[t, t+s]$ is independent of time.// 
-iii) Independent increments: for every increasing sequence of time $t{0},...,t_{n}$, the random variables $X_{t_{0}}, X_{t_{1}}-X_{t_{0}},...,X_{t_{n}}-X_{t_{n-1}}$ are independent.//
-iv) Stochastic continuity so that discontinuity occurs at random times i.e. $\forall \epsilon > 0, \lim_{h \rightarrow 0} P(|X_{t+s}-X_{t}| \geq \epsilon)$//
-v) The paths $X_{t}$ are Cad-lag paths i.e. almost surely right continuous with left limits//
+\begin{enumerate}
+\item P(X_{0}=0)=1
+\item Stationary increments: the distribution $X_{t+s}-X_{t}$ over the interval $[t, t+s]$ is independent of time.
+\item Independent increments: for every increasing sequence of time $t{0},...,t_{n}$, the random variables $X_{t_{0}}, X_{t_{1}}-X_{t_{0}},...,X_{t_{n}}-X_{t_{n-1}}$ are independent.
+\item Stochastic continuity so that discontinuity occurs at random times i.e. $\forall \epsilon > 0, \lim_{h \rightarrow 0} P(|X_{t+s}-X_{t}| \geq \epsilon)$
+\item The paths $X_{t}$ are \textit(Cadlag) paths i.e. almost surely right continuous with left limits.
 
-Combining a Brownian Motion with a drift and a compound Poisson process, we obtain the simplest case of a jump diffusion process with jumps (sometimes) and has a continuous but random evolution between jump times i.e.
+Combining a Brownian Motion with a drift and a compound Poisson process, we obtain the simplest case of a jump diffusion process with jumps (sometimes) and has a continuous but random evolution between jump times, i.e.,
 \begin{equation*}
 dX_{t}=\mu X_{t-}dt + \sigma X_{t-} dZ_{t} + X_{t-}dJ_{t}
 \end{equation*}
